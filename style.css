@@ -18,6 +18,7 @@
     --beetle-green: #547878;
     --topaz: #26C2AE;
     --regent-grey: #7F9D9F;
+    --water-leaf: #9FE8DF;
 } 
 
 body {
@@ -96,6 +97,16 @@ main {
             font-weight: 700;
         }
 
+        button:hover {
+            background: var(--water-leaf);
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .button-selected {
+            background: var(--topaz);
+        }
+
         input {
             width: 100%;
             background-color: var(--squeeze);
@@ -118,7 +129,7 @@ main {
     }
 }
 
-.resulta {
+.results {
     background: var(--sherpa-blue);
     border-radius: 1.5rem;
     padding: 4rem 2.4rem 2.4rem;
@@ -157,6 +168,52 @@ main {
         border: none;
         padding-block: .9rem;
         border: .5rem;
+    }
+
+    button:hover {
+        background: var(--water-leaf);
+        cursor: pointer;
+        transition: .3s;
+    }
+}
+
+input::-webkit-input-placeholder,
+input::-webkit-outer-spin-button {
+    display: none;
+}
+
+@media(min-width: 920px) {
+     header {
+        margin-top: 5rem;
+     }
+
+    main {
+        display: flex;
+        max-width: 92rem;
+        margin-inline: auto;
+        border: 2.5rem;
+        padding: 4.8rem;
+        gap: 4.8rem;
+
+        section {
+            width: 100%;
+        }
+
+        .info .tip div {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .results {
+             padding: 4rem;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-between;
+
+            .amount strong,
+            .total strong {
+                font-size: 4.8rem;
+            }
+        }
     }
 }
 
