@@ -15,7 +15,9 @@
     --greyish-turquoise: #5E7A7D;
     --squeeze: #F3F9FA;
     --sherpa-blue: #00474B;
-}
+    --beetle-green: #547878;
+    --topaz: #26C2AE;
+} 
 
 body {
     font-size: 1.6rem;
@@ -40,13 +42,13 @@ main {
     padding-inline: .8rem;
 
     strong {
-        color: var(--jagged-ice);
+        color: var(--greyish-turquoise);
         display: block;
         margin-bottom: .6rem;
     }
 
     div {
-        margin-left: 3.2rem;
+        margin-bottom: 3.2rem;
     }
 
     .input-box {
@@ -62,7 +64,7 @@ main {
             text-align: right;
             width: 100%;
             outline: none;
-            font: 2.4rem;
+            font-size: 2.4rem;
             font-weight: 700;
             color: var(--sherpa-blue);
         }
@@ -73,13 +75,44 @@ main {
         }
     }
 
+    .input-box:has(input:focus) {
+        outline-offset: 2px solid var(--topaz);
+    }
+
     .tip > div {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.6rem;
+        margin-top: 1rem;
+
+        botton {
+            border: none;
+            background: var(--sherpa-blue);
+            color: var(--white);
+            font-size: 2.4rem;
+            border-radius: .5rem;
+            padding-block: .6rem;
+            font-weight: 700;
+        }
 
         input {
             width: 100%;
+            background-color: var(--squeeze);
+            font-size: 2.4rem;
+            text-align: center;
+            border: none;
+            border-radius: .5rem;
+            outline: none;
+            font-weight: 700;
+            color: var(--sherpa-blue);
+
+            &::placeholder {
+                color: var(--beetle-green);
+            }
+
+            &:fofus {
+                outline: 2px solid var(--topaz);
+            }
         }
     }
 }
