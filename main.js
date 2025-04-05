@@ -14,6 +14,15 @@ function receiveBillValue() {
 function receiveTipPercentageValue(value) {
     tipPercentage = value / 100
 
+    removeClassButtonSelected()
+
     buttonSelected = document.querySelector(`#button-${value}`)
     buttonSelected.classList.add("button-selected")
+}
+
+function removeClassButtonSelected() {
+    if (buttomSelected !== null) {
+        buttonSelected.classList.remove("buttom-selected")
+        buttonSelected = null
+    }
 }
